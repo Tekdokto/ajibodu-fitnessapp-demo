@@ -7,7 +7,7 @@ import Weight from 'src/views/dashboards/history/Weight'
 import BmiControl from 'src/views/dashboards/history/BmiControl'
 import SleepChart from 'src/views/dashboards/history/SleepChart'
 
-const AnalyticsDashboard = () => {
+const HistoryDashboard = () => {
   const todayDate = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", day:"numeric"});
   
     return (
@@ -39,4 +39,4 @@ const AnalyticsDashboard = () => {
   )
 }
 
-export default AnalyticsDashboard
+export default HistoryDashboard

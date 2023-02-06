@@ -13,7 +13,7 @@ const Avatar = styled(CustomAvatar)<CustomAvatarProps>({
   height: '2.375rem',
   fontSize: '1.125rem'
 })
-const EcommerceDashboard = () => {
+const ActivityDashboard = () => {
   return (
     <ApexChartWrapper>
       <Box sx={{display: 'flex', alignItems: 'center', 
@@ -34,4 +34,4 @@ const EcommerceDashboard = () => {
   )
 }
 
-export default EcommerceDashboard
+export default ActivityDashboard
