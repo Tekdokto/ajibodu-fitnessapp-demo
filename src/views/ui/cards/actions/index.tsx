@@ -15,11 +15,6 @@ import Close from 'mdi-material-ui/Close'
 import Refresh from 'mdi-material-ui/Refresh'
 import ChevronUp from 'mdi-material-ui/ChevronUp'
 
-// Component Imports
-import CardActionAll from 'src/views/ui/cards/actions/CardActionAll'
-import CardActionClose from 'src/views/ui/cards/actions/CardActionClose'
-import CardActionRefresh from 'src/views/ui/cards/actions/CardActionRefresh'
-import CardActionCollapse from 'src/views/ui/cards/actions/CardActionCollapse'
 
 const CardActions = () => {
   return (
@@ -72,19 +67,7 @@ const CardActions = () => {
         </Card>
       </Grid>
 
-      {/* Action Cards  */}
-      <Grid item xs={12} md={6}>
-        <CardActionCollapse />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <CardActionRefresh />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <CardActionClose />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <CardActionAll />
-      </Grid>
+      
     </Grid>
   )
 }
