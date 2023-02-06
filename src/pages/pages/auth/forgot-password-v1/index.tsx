@@ -1,10 +1,8 @@
-// ** React Imports
+
 import { ReactNode, SyntheticEvent } from 'react'
 
-// ** Next Imports
 import Link from 'next/link'
 
-// ** MUI Components
 import Box from '@mui/material/Box'
 import MuiLink from '@mui/material/Link'
 import Button from '@mui/material/Button'
@@ -13,26 +11,19 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import { styled, useTheme } from '@mui/material/styles'
 import MuiCard, { CardProps } from '@mui/material/Card'
-
-// ** Icons Imports
 import ChevronLeft from 'mdi-material-ui/ChevronLeft'
 
-// ** Configs
 import themeConfig from 'src/configs/themeConfig'
 
-// ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
-// ** Demo Imports
 import FooterIllustrationsV1 from 'src/views/pages/auth/FooterIllustrationsV1'
 
-// ** Styled Components
 const Card = styled(MuiCard)<CardProps>(({ theme }) => ({
   [theme.breakpoints.up('sm')]: { width: 450 }
 }))
 
 const ForgotPasswordV1 = () => {
-  // ** Hook
   const theme = useTheme()
 
   const handleSubmit = (e: SyntheticEvent) => {

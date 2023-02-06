@@ -1,4 +1,4 @@
-// ** MUI Imports
+
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Link from '@mui/material/Link'
@@ -7,11 +7,6 @@ import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 
-/**
- ** Icons Imports:
- * ! You need to import all the icons which come from the API or from your server and then add these icons in 'icons' variable.
- * ! If you need all the icons from the library, use "import * as Icon from 'mdi-material-ui'"
- * */
 import Abacus from 'mdi-material-ui/Abacus'
 import Account from 'mdi-material-ui/Account'
 import AbTesting from 'mdi-material-ui/AbTesting'
@@ -61,7 +56,6 @@ import AccountArrowLeftOutline from 'mdi-material-ui/AccountArrowLeftOutline'
 import AccountArrowRightOutline from 'mdi-material-ui/AccountArrowRightOutline'
 import AccountBoxMultipleOutline from 'mdi-material-ui/AccountBoxMultipleOutline'
 
-// ** Custom Components Imports
 import PageHeader from 'src/@core/components/page-header'
 
 const icons = {

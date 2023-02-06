@@ -1,4 +1,4 @@
-// ** MUI Imports
+
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Table from '@mui/material/Table'
@@ -10,7 +10,6 @@ import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import TableContainer from '@mui/material/TableContainer'
 
-// ** Icon Imports
 import Close from 'mdi-material-ui/Close'
 import Refresh from 'mdi-material-ui/Refresh'
 import ChevronUp from 'mdi-material-ui/ChevronUp'
