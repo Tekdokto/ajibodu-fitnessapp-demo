@@ -46,6 +46,7 @@ import 'prismjs/components/prism-tsx'
 import 'react-perfect-scrollbar/dist/css/styles.css'
 
 import '../../styles/globals.css'
+import ActivityDashboard from './dashboards/activities'
 
 type ExtendedAppProps = AppProps & {
   Component: NextPage
@@ -115,7 +116,7 @@ const App = (props: ExtendedAppProps) => {
                 return (
                   <ThemeComponent settings={settings}>
                     <WindowWrapper>
-                      <Guard authGuard={authGuard} guestGuard={guestGuard}>
+                    <Guard authGuard={authGuard} guestGuard={guestGuard}>
                         <AclGuard aclAbilities={aclAbilities} guestGuard={guestGuard}>
                           {getLayout(<Component {...pageProps} />)}
                         </AclGuard>
