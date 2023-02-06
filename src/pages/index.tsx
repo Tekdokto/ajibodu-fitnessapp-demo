@@ -7,10 +7,7 @@ import Spinner from 'src/@core/components/spinner'
 
 import { useAuth } from 'src/hooks/useAuth'
 
-export const getHomeRoute = (role: string) => {
-  if (role === 'client') return '/dashboards/activities'
-  else return '/dashboards/activities'
-}
+
 
 const Home = () => {
 
@@ -19,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     if (auth.user && auth.user.role) {
-      const homeRoute = getHomeRoute(auth.user.role)
+      const homeRoute = '/dashboards/activities'
 
       router.replace(homeRoute)
     }
