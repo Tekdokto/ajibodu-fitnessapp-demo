@@ -69,7 +69,7 @@ if (themeConfig.routingLoader) {
   })
 }
 
-const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
+const Guard = ({ children }: GuardProps) => {
   return <>{children}</>
 }
 
