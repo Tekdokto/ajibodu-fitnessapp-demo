@@ -23,15 +23,16 @@ const AuthGuard = (props: AuthGuardProps) => {
         return
       }
 
+
       if (auth.user === null && !window.localStorage.getItem('userData')) {
-        if (router.asPath !== '/') {
+        // if (router.asPath !== '/') {
           router.replace({
             pathname: '/dashboards/activities',
             query: { returnUrl: router.asPath }
           })
-        } else {
-          router.replace('/dashboards/activities')
-        }
+        // } else {
+        //   router.replace('/dashboards/activities')
+        // }
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
