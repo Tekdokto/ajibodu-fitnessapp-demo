@@ -13,6 +13,7 @@ const TwoCards = () => {
         <CardStatisticsVertical
           stats='21'
           color='success'
+          trendNumber='20'
           title='Age'
           icon={<CogOutline />}
           chipText='Last Six Month'
@@ -20,6 +21,7 @@ const TwoCards = () => {
         <CardStatisticsVertical
           stats='173'
           color='success'
+          trendNumber='20'
           title='Height'
           icon={<CogOutline />}
           chipText='Last Six Month'
