@@ -1,19 +1,13 @@
-// ** MUI Imports
-import { styled, Theme } from '@mui/material/styles'
 
-// ** Styled Component Import
-
-
+import { styled } from '@mui/material/styles'
 import CustomAvatar from 'src/@core/components/mui/avatar'
 import { CustomAvatarProps } from 'src/@core/components/mui/avatar/types'
 import Box from '@mui/material/Box'
-import { CardContent, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import KeenSliderWrapper from 'src/@core/styles/libs/keen-slider'
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
-
-// ** Demo Components Imports
 import Tabs from 'src/views/dashboards/activities/Tabs'
-// ** Styled Avatar component
+
 const Avatar = styled(CustomAvatar)<CustomAvatarProps>({
   width: '2.375rem',
   height: '2.375rem',
@@ -34,9 +28,7 @@ const EcommerceDashboard = () => {
         </Box>
         <br />
       <KeenSliderWrapper>
-        {/* <Grid container spacing={6} className='match-height'> */}
             <Tabs />
-        {/* </Grid> */}
       </KeenSliderWrapper>
     </ApexChartWrapper>
   )
