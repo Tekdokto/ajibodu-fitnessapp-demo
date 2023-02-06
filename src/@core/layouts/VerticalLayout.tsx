@@ -90,7 +90,6 @@ const VerticalLayout = (props: LayoutProps) => {
           >
             {children}
           </ContentWrapper>
-
           <Footer {...props} />
         </MainContentWrapper>
       </VerticalLayoutWrapper>
