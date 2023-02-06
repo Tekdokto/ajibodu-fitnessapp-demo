@@ -8,7 +8,8 @@ import BmiControl from 'src/views/dashboards/history/BmiControl'
 import SleepChart from 'src/views/dashboards/history/SleepChart'
 
 const AnalyticsDashboard = () => {
-  const todayDate = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", day:"numeric"}) 
+  const todayDate = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", day:"numeric"});
+  
     return (
       <ApexChartWrapper>
         <Box sx={{display: 'flex', alignItems: 'center', 
