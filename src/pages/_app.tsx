@@ -21,6 +21,11 @@ import themeConfig from 'src/configs/themeConfig'
 import 'src/@fake-db'
 
 import { Toaster } from 'react-hot-toast'
+import AuthGuard from 'src/@core/components/auth/AuthGuard'
+import GuestGuard from 'src/@core/components/auth/GuestGuard'
+
+// ** Spinner Import
+import Spinner from 'src/@core/components/spinner'
 
 import UserLayout from 'src/layouts/UserLayout'
 import AclGuard from 'src/@core/components/auth/AclGuard'
@@ -69,8 +74,14 @@ if (themeConfig.routingLoader) {
   })
 }
 
-const Guard = ({ children }: GuardProps) => {
-  return <>{children}</>
+const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
+  if (guestGuard) {
+    return <GuestGuard fallback={<Spinner />}>{children}</GuestGuard>
+  } else if (!guestGuard && !authGuard) {
+    return <>{children}</>
+  } else {
+    return <AuthGuard fallback={<Spinner />}>{children}</AuthGuard>
+  }
 }
 
 const App = (props: ExtendedAppProps) => {
