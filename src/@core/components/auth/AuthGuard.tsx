@@ -32,7 +32,7 @@ const AuthGuard = (props: AuthGuardProps) => {
           })
         } else {
           router.replace({
-            pathname: router.route,
+            pathname: '/dashboards/history',
             query: { returnUrl: router.asPath }
           })
       }
