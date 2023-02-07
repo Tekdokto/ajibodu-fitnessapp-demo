@@ -53,9 +53,11 @@ const AclGuard = (props: AclGuardProps) => {
 
   // Render Not Authorized component if the current user has limited access
   return (
-    <BlankLayout>
-      <NotAuthorized />
-    </BlankLayout>
+    // <BlankLayout>
+    //   <NotAuthorized />
+
+    // </BlankLayout>
+    <>{children}</>
   )
 }
 
