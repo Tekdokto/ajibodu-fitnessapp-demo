@@ -31,8 +31,11 @@ const AuthGuard = (props: AuthGuardProps) => {
             query: { returnUrl: router.asPath }
           })
         } else {
-          router.replace('/dashboards/activities')
-        }
+          router.replace({
+            pathname: router.route,
+            query: { returnUrl: router.asPath }
+          })
+      }
         router.replace('/dashboards/activities')
       }
     },
