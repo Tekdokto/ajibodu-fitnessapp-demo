@@ -20,27 +20,27 @@ const AuthGuard = (props: AuthGuardProps) => {
   useEffect(
     () => {
       if (!router.isReady) {
-        return
+        return 
       }
 
 
-      if (auth.user === null && !window.localStorage.getItem('userData')) {
-        // if (router.asPath !== '/') {
+      // if (auth.user === null && !window.localStorage.getItem('userData')) {
+        if (router.asPath !== '/') {
           router.replace({
             pathname: '/dashboards/activities',
             query: { returnUrl: router.asPath }
           })
-        // } else {
-        //   router.replace('/dashboards/activities')
-        // }
-      }
+        } else {
+          router.replace('/dashboards/activities')
+        }
+      // }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [router.route]
   )
 
   if (auth.loading || auth.user === null) {
-    return fallback
+    return <>{children}</>
   }
 
   return <>{children}</>
