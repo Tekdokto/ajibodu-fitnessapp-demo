@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 
 import { useAuth } from 'src/hooks/useAuth'
-import ActivityDashboard from './dashboards/activities'
+// import ActivityDashboard from './dashboards/activities'
 
 
 
@@ -22,7 +22,7 @@ const Home = () => {
     }
   }, [])
 
-  return <ActivityDashboard />
+  // return <ActivityDashboard />
 }
 
 export default Home
