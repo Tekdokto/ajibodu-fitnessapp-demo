@@ -6,7 +6,6 @@ import { useRouter } from 'next/router'
 import Spinner from 'src/@core/components/spinner'
 
 import { useAuth } from 'src/hooks/useAuth'
-import ActivityDashboard from './dashboards/activities'
 
 
 
