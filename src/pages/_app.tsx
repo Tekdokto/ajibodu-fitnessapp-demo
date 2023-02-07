@@ -48,6 +48,7 @@ import 'prismjs/components/prism-tsx'
 import 'react-perfect-scrollbar/dist/css/styles.css'
 
 import '../../styles/globals.css'
+import ActivityDashboard from './dashboards/activities'
 
 type ExtendedAppProps = AppProps & {
   Component: NextPage
@@ -76,11 +77,11 @@ if (themeConfig.routingLoader) {
 
 const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
   if (guestGuard) {
-    return <GuestGuard fallback={<Spinner />}>{children}</GuestGuard>
+    return <GuestGuard fallback={<Spinner />}><ActivityDashboard /></GuestGuard>
   } else if (!guestGuard && !authGuard) {
     return <>{children}</>
   } else {
-    return <AuthGuard fallback={<Spinner />}>{children}</AuthGuard>
+    return <AuthGuard fallback={<Spinner />}><ActivityDashboard /></AuthGuard>
   }
 }
 
