@@ -75,7 +75,7 @@ if (themeConfig.routingLoader) {
   })
 }
 
-const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
+const Guard = ({ authGuard, guestGuard }: GuardProps) => {
   if (guestGuard) {
     return <GuestGuard fallback={<Spinner />}><ActivityDashboard /></GuestGuard>
   } else if (!guestGuard && !authGuard) {
