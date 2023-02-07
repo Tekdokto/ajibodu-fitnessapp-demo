@@ -79,7 +79,7 @@ const Guard = ({ children, authGuard, guestGuard }: GuardProps) => {
   if (guestGuard) {
     return <GuestGuard fallback={<Spinner />}><ActivityDashboard /></GuestGuard>
   } else if (!guestGuard && !authGuard) {
-    return <>{children}</>
+    return <><ActivityDashboard /></>
   } else {
     return <AuthGuard fallback={<Spinner />}><ActivityDashboard /></AuthGuard>
   }
