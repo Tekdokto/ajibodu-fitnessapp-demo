@@ -32,11 +32,11 @@ const AuthGuard = (props: AuthGuardProps) => {
           })
         } else {
           router.replace({
-            pathname: '/dashboards/history',
+            pathname: router.route,
             query: { returnUrl: router.asPath }
           })
       }
-        router.replace('/dashboards/activities')
+        router.replace(router.route)
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
