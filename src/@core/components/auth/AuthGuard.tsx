@@ -20,11 +20,11 @@ const AuthGuard = (props: AuthGuardProps) => {
   useEffect(
     () => {
       if (!router.isReady) {
-        return 
+        router.replace('/dashboards/activities')
       }
 
 
-      // if (auth.user === null && !window.localStorage.getItem('userData')) {
+      if (auth.user === null && !window.localStorage.getItem('userData')) {
         if (router.asPath !== '/') {
           router.replace({
             pathname: '/dashboards/activities',
@@ -33,7 +33,8 @@ const AuthGuard = (props: AuthGuardProps) => {
         } else {
           router.replace('/dashboards/activities')
         }
-      // }
+        router.replace('/dashboards/activities')
+      }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [router.route]
